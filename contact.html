@@ -10,6 +10,8 @@
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+    <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet">
 </head>
 <body>
 <header>
@@ -23,6 +25,9 @@
             <li><a href="journey.html">Journey</a></li>
             <li><a href="contact.html" class="active">Contact</a></li>
         </ul>
+        <button type="button" id="themeToggle">
+    <i class="fas fa-moon"></i>
+</button>
     </nav>
 </header>
 <main>
@@ -34,11 +39,32 @@
     <div class="contact-container">
 
         <div class="contact-info">
-            <h3>Email</h3>
-            <p>your@email.com</p>
+           <h3>Follow Me</h3>
 
-            <h3>Phone</h3>
-            <p>+8801XXXXXXXXX</p>
+
+<div class="social-links">
+
+<a href="https://github.com/RajeshDas57"
+   target="_blank"
+   rel="noopener noreferrer"
+   aria-label="GitHub Profile">
+    <i class="fab fa-github"></i>
+</a>
+
+<a href="#"
+   target="_blank"
+   rel="noopener noreferrer"
+   aria-label="LinkedIn Profile">
+    <i class="fab fa-linkedin"></i>
+</a>
+
+<a href="#"
+   target="_blank"
+   rel="noopener noreferrer"
+   aria-label="Facebook Profile">
+    <i class="fab fa-facebook-f"></i>
+</a>
+</div>
             <h3>📧 Email</h3>
 <p>realboyjoy67@email.com</p>
 
@@ -49,7 +75,7 @@
 <p>Chittagong, Bangladesh</p>
         </div>
 
-        <form class="contact-form">
+        <form class="contact-form" id="contactForm">
 
             <input type="text" placeholder="Your Name">
 
@@ -58,6 +84,7 @@
             <textarea placeholder="Your Message"></textarea>
 
             <button type="submit">Send Message</button>
+            <p id="formMessage"></p>
 
         </form>
 
@@ -68,5 +95,7 @@
 <footer class="footer">
     <p>© 2026 Rajesh Das Joy. All Rights Reserved.</p>
 </footer>
+<script src="https://unpkg.com/scrollreveal"></script>
+<script src="js/main.js"></script>
 </body>
 </html>

@@ -11,6 +11,8 @@
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+    
 </head>
 
 <body>
@@ -24,6 +26,12 @@
                 <li><a href="journey.html">Journey</a></li>
                 <li><a href="contact.html">Contact</a></li>
             </ul>
+            <button type="button" id="themeToggle">
+    <i class="fas fa-moon"></i>
+</button>
+<div class="menu-toggle">
+    <i class="fas fa-bars"></i>
+</div>
         </nav>
     </header>
 <main>
@@ -35,28 +43,36 @@
             Here are some of the projects I have built during my learning journey.
         </p>
 
-        <div class="project-grid">
+       <div class="project-grid">
 
+    <div class="project-card">
+
+        <img src="images/rajesh.jpg" alt="AI Task Manager">
+
+        <h3>AI Task Manager</h3>
+
+        <p>
+            A task management system built with Laravel, MySQL, and JavaScript.
+        </p>
+
+        <div class="tags">
+            <span>Laravel</span>
+            <span>MySQL</span>
+            <span>JavaScript</span>
         </div>
-<div class="project-card">
 
-    <img src="images/rajesh.jpg" alt="AI Task Manager">
+        <a href="#">View Project</a>
 
-    <h3>AI Task Manager</h3>
-
-    <p>
-        A task management system built with Laravel, MySQL, and JavaScript.
-    </p>
-    <div class="tags">
-    <span>Laravel</span>
-    <span>MySQL</span>
-    <span>JavaScript</span>
-</div>
-    <a href="#">View Project</a>
+    </div>
 
 </div>
     </section>
 
 </main>
+<footer>
+    <p>© 2026 Rajesh Das Joy. All Rights Reserved.</p>
+</footer>
+<script src="https://unpkg.com/scrollreveal"></script>
+<script src="js/main.js"></script>
 </body>
 </html>

@@ -106,7 +106,7 @@ nav ul li a:hover{
 .about{
     display:flex;
     justify-content:space-between;
-    align-items:center;
+    align-items: flex-start;
     padding:80px;
     gap: 60px;
 }
@@ -116,7 +116,7 @@ nav ul li a:hover{
     justify-content:center;
 }
 .about-image img{
-    width:400px;
+    width:450px;
     border-radius:20px;
     box-shadow:0 0 30px rgba(0,212,255,.3);
     transition:0.4s;
@@ -533,4 +533,248 @@ nav ul li a.active::after{
 
 ::-webkit-scrollbar-thumb:hover{
     background:#00b8dd;
+}
+footer{
+    text-align:center;
+    padding:25px;
+    border-top:1px solid #333;
+    color:#bbbbbb;
+    margin-top:60px;
+}
+
+footer p{
+    font-size:15px;
+}
+.social-links{
+    display:flex;
+    gap:15px;
+    margin-top:20px;
+}
+
+.social-links a{
+    width:50px;
+    height:50px;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    text-decoration:none;
+    color:#00d4ff;
+    border:2px solid #00d4ff;
+    border-radius:50%;
+    font-size:22px;
+    transition:.3s ease;
+}
+
+.social-links a:hover{
+    background:#00d4ff;
+    color:#000;
+    transform:translateY(-5px);
+    box-shadow:0 0 20px rgba(0,212,255,.5);
+}
+.skill-bars{
+    margin-top:30px;
+}
+
+.skill{
+    margin-bottom:20px;
+}
+
+.skill span{
+    display:block;
+    margin-bottom:8px;
+    font-weight:600;
+}
+
+.progress{
+    width:100%;
+    height:12px;
+    background:#2a2a2a;
+    border-radius:20px;
+    overflow:hidden;
+}
+
+.progress-fill{
+    height:100%;
+    background:linear-gradient(90deg,#00d4ff,#00ff88);
+    border-radius:20px;
+    color:#000;
+    font-size:10px;
+    font-weight:bold;
+    text-align:right;
+    padding-right:8px;
+    line-height:12px;
+
+    transform:scaleX(0);
+    transform-origin:left;
+    animation:fillBar 2s ease forwards;
+}
+
+.html{
+    width:95%;
+}
+
+.css{
+    width:90%;
+}
+
+.js{
+    width:80%;
+}
+
+.laravel{
+    width:75%;
+}
+@keyframes fillBar{
+
+    from{
+        transform:scaleX(0);
+    }
+
+    to{
+        transform:scaleX(1);
+    }
+
+}
+#formMessage{
+    margin-top:15px;
+    font-weight:600;
+}
+.menu-toggle{
+    display:none;
+    font-size:28px;
+    cursor:pointer;
+    color:#00d4ff;
+}
+
+@media(max-width:768px){
+
+    .menu-toggle{
+        display:block;
+    }
+
+    nav ul{
+        display:none;
+        flex-direction:column;
+        width:100%;
+        text-align:center;
+        margin-top:20px;
+    }
+
+    nav ul.active{
+        display:flex;
+    }
+
+}
+#themeToggle{
+    background:none;
+    border:none;
+    color:#00d4ff;
+    font-size:22px;
+    cursor:pointer;
+    transition:.3s;
+}
+
+#themeToggle:hover{
+    transform:rotate(20deg);
+}
+
+.light-mode{
+    background:#f5f5f5;
+    color:#111;
+}
+
+.light-mode nav{
+    background:#ffffff;
+    border-bottom:1px solid #ddd;
+}
+
+.light-mode .project-card,
+.light-mode .education-item,
+.light-mode .experience-item,
+.light-mode .timeline-item,
+.light-mode .stat-card{
+    background:#ffffff;
+    color:#111;
+}
+/* Light Mode */
+body.light-mode{
+    background:#f5f5f5;
+    color:#111;
+}
+
+body.light-mode nav{
+    background:#ffffff;
+    border-bottom:1px solid #ddd;
+}
+
+body.light-mode .hero-content h3,
+body.light-mode .typing{
+    color:#00b7eb;
+}
+
+body.light-mode .hero-content p,
+body.light-mode .about-content p,
+body.light-mode .project-card p,
+body.light-mode .timeline-item p{
+    color:#555;
+}
+
+body.light-mode .project-card,
+body.light-mode .education-item,
+body.light-mode .experience-item,
+body.light-mode .stat-card,
+body.light-mode .timeline-item,
+body.light-mode .contact-info,
+body.light-mode .contact-form{
+    background:#ffffff;
+    color:#111;
+    box-shadow:0 5px 20px rgba(0,0,0,.08);
+}
+
+body.light-mode input,
+body.light-mode textarea{
+    background:#fff;
+    color:#111;
+    border:1px solid #ccc;
+}
+
+body.light-mode input::placeholder,
+body.light-mode textarea::placeholder{
+    color:#777;
+}
+body.light-mode .hero-buttons a{
+    color:#111;
+    border-color:#00b7eb;
+}
+
+body.light-mode .hero-buttons a:hover{
+    background:#00b7eb;
+    color:#fff;
+}
+/* Light Mode Navbar */
+
+body.light-mode nav{
+    background:#ffffff;
+    border-bottom:1px solid #ddd;
+}
+
+body.light-mode .logo{
+    color:#00b7eb;
+}
+
+body.light-mode nav ul li a{
+    color:#111;
+}
+
+body.light-mode nav ul li a:hover,
+body.light-mode nav ul li a.active{
+    color:#00b7eb;
+}
+
+body.light-mode #themeToggle{
+    color:#00b7eb;
+}
+body.light-mode nav ul li a.active{
+    border-bottom:2px solid #00b7eb;
+    padding-bottom:5px;
 }
