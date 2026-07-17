@@ -40,7 +40,7 @@ counters.forEach(counter => {
 });
 
 // ===========================
-// Contact Form Validation
+// Contact Form + EmailJS
 // ===========================
 
 const form = document.getElementById("contactForm");
@@ -51,34 +51,34 @@ if (form) {
 
         e.preventDefault();
 
-        const inputs = form.querySelectorAll("input, textarea");
         const message = document.getElementById("formMessage");
 
-        let isValid = true;
+        emailjs.sendForm(
+            "service_rmv2ru5",
+            "template_la18hwr",
+            this
+        )
 
-        inputs.forEach(input => {
-            if (input.value.trim() === "") {
-                isValid = false;
-            }
-        });
-
-        if (isValid) {
+        .then(() => {
 
             message.textContent = "✅ Message sent successfully!";
             message.style.color = "#00ff88";
             form.reset();
 
-        } else {
+        })
 
-            message.textContent = "❌ Please fill in all fields.";
+        .catch((error) => {
+
+            console.error(error);
+
+            message.textContent = "❌ Failed to send message!";
             message.style.color = "#ff4d4d";
 
-        }
+        });
 
     });
 
 }
-
 // ===========================
 // Mobile Menu
 // ===========================
@@ -195,3 +195,37 @@ ScrollReveal().reveal(".timeline-item", {
 ScrollReveal().reveal(".contact-container", {
     origin: "bottom"
 });
+// ===========================
+// Back To Top Button
+// ===========================
+
+const topBtn = document.getElementById("topBtn");
+
+if(topBtn){
+
+    window.addEventListener("scroll", ()=>{
+
+        if(window.scrollY > 300){
+
+            topBtn.style.display = "block";
+
+        }else{
+
+            topBtn.style.display = "none";
+
+        }
+
+    });
+
+    topBtn.addEventListener("click", ()=>{
+
+        window.scrollTo({
+
+            top:0,
+            behavior:"smooth"
+
+        });
+
+    });
+
+}

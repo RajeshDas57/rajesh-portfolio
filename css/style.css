@@ -778,3 +778,33 @@ body.light-mode nav ul li a.active{
     border-bottom:2px solid #00b7eb;
     padding-bottom:5px;
 }
+/* Back To Top Button */
+
+#topBtn{
+    position:fixed;
+    bottom:30px;
+    right:30px;
+
+    width:50px;
+    height:50px;
+
+    border:none;
+    border-radius:50%;
+
+    background:#00d4ff;
+    color:white;
+
+    font-size:20px;
+    cursor:pointer;
+
+    display:none;
+
+    transition:.3s;
+
+    z-index:999;
+}
+
+#topBtn:hover{
+    transform:translateY(-5px);
+    box-shadow:0 0 20px rgba(0,212,255,.6);
+}
